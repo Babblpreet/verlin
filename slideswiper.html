@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- slide swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style type="text/css">
+        .container {
+            max-width: 1230px;
+            padding: 0 25px;
+            margin: 0 auto;
+        }
+
+        .img_slider {
+            max-width: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <title>slide swiper</title>
+</head>
+
+<body>
+    <section class="swiper_sec">
+        <div class="container">
+            <div class="swiper mySwiper card_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img_slider" src="./assets/images/bag 1 image .png" alt="">
+                    </div>
+                    <div class="swiper-slide"><img class="img_slider" src="./assets/images/bag 2 image.png" alt="">
+                    </div>
+                    <div class="swiper-slide"><img class="img_slider" src="./assets/images/bag 3 image.png" alt="">
+                    </div>
+                    <div class="swiper-slide"><img class="img_slider" src="./assets/images/bag 4 image.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- slide swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+        var swiper = new Swiper(".card_slider", {
+            autoplay:true,
+            loop:true,
+            effect:'fade',
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+
+                425: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+        
+    </script>
+</body>
+
+</html>
